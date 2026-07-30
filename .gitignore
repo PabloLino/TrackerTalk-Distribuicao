@@ -1,0 +1,17 @@
+# Instaladores pertencem às Releases, nunca ao histórico Git
+*.exe
+*.msi
+*.msix
+
+# Configurações locais e credenciais
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Temporários
+.DS_Store
+Thumbs.db
+.tmp-*/

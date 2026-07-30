@@ -31,7 +31,8 @@
       <p>O TrackerTalk foi projetado para preservar e consultar conversas na máquina do próprio usuário. O conteúdo das conversas, imagens copiadas, títulos, caminhos de projeto e identificadores de rastreio não são enviados para um servidor do produto.</p>
 
       <h2>Verificação de atualizações</h2>
-      <p>Quando o recurso estiver presente no aplicativo, ele consultará um manifesto público por HTTPS para descobrir o número da versão atual. Essa solicitação não incluirá conversas, projetos, credenciais ou identificadores de rastreio.</p>
+      <p>A partir da versão 0.7.0, o aplicativo consulta no máximo uma vez a cada 24 horas um manifesto público por HTTPS. A solicitação informa a versão do TrackerTalk no agente de usuário, mas não inclui conversas, projetos, caminhos locais, credenciais ou identificadores de rastreio.</p>
+      <p>Falhas de rede são silenciosas na verificação automática. O download só ocorre após confirmação, e o instalador precisa corresponder ao tamanho e ao SHA-256 publicados antes de ser oferecido para execução.</p>
       <p>Como em qualquer acesso HTTP, o provedor de hospedagem pode receber dados técnicos necessários à conexão, como endereço IP, data, horário, agente de usuário e URL solicitada, conforme as políticas do próprio provedor.</p>
 
       <h2>Site de distribuição</h2>

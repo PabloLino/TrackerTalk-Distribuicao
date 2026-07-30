@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.7.0",
+      "published_at": "2026-07-30T20:25:37Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.7.0/TrackerTalk-Setup-0.7.0.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.7.0",
+      "sha256": "9E2905AB9916155C19FC63FD38B7427A77E16FCFB521ED8AEDEE2CCE4E59BFAA",
+      "size": 35164480,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Primeira versão proprietária gratuita, com atualizador opcional, validação por SHA-256 e preservação integral dos terminais de IA."
+    },
+    {
       "version": "0.6.4",
       "published_at": "2026-07-30T19:41:18Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.6.4/TrackerTalk-Setup-0.6.4.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "MIT",
-      "supported": true,
+      "supported": false,
       "summary": "Primeiro instalador público do TrackerTalk, com painel local, rastreio de sessões, retomada, handoff, Trakino e desinstalação segura."
     }
   ]

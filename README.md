@@ -42,8 +42,10 @@ Depois que uma Release for publicada:
 
 ## Licenciamento
 
-A licença aplicável ao aplicativo é declarada individualmente em cada Release. A disponibilização pública deste site e dos instaladores não torna automaticamente versões futuras do aplicativo open source.
+A licença aplicável ao aplicativo é declarada individualmente em cada Release. A disponibilização pública deste site e dos instaladores não torna o aplicativo open source.
 
-A versão `0.6.4` foi publicada sob licença MIT. Mudanças de licença em versões posteriores não alteram retroativamente os direitos concedidos às versões anteriores.
+A versão `0.6.4` foi a última publicada sob licença MIT. A versão `0.7.0` é a primeira proprietária gratuita e inclui sua licença de uso no instalador. A mudança não altera retroativamente os direitos concedidos à versão MIT.
+
+Pessoas e organizações podem usar a versão proprietária sem cobrança, inclusive para trabalho profissional. O código-fonte do aplicativo não faz parte deste repositório público.
 
 O conteúdo autoral deste repositório de distribuição permanece protegido pelos direitos aplicáveis, salvo indicação expressa em contrário.

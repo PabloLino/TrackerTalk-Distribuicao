@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.0",
+      "published_at": "2026-08-11T19:16:04Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.0/TrackerTalk-Setup-0.8.0.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.0",
+      "sha256": "5BA7082BCCA99140959B91B36D75D5D41D289F56FB2020FA1C887D1A90CA4D43",
+      "size": 55803281,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Conversas derivadas de handoff aparecem ramificadas no painel, com cabeçalho único, cores por provedor e situação, guia em vídeo do Trakino e aviso quando outra versão do agente já está em execução."
+    },
+    {
       "version": "0.7.0",
       "published_at": "2026-07-30T20:25:37Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.7.0/TrackerTalk-Setup-0.7.0.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Primeira versão proprietária gratuita, com atualizador opcional, validação por SHA-256 e preservação integral dos terminais de IA."
     },
     {

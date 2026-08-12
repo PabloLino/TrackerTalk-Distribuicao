@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.3",
+      "published_at": "2026-08-12T20:06:43Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.3/TrackerTalk-Setup-0.8.3.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.3",
+      "sha256": "9A0B78DE5E1F96208C2862F0EC96FDD1AC76A7E0AD1F48B2CB34C87D3B09ED43",
+      "size": 53895930,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Adiciona os adaptadores do Antigravity CLI (agy), sucessor do Gemini CLI, e do Grok, mantém o Gemini legado e amplia o diagnóstico do comando doctor."
+    },
+    {
       "version": "0.8.2",
       "published_at": "2026-08-12T17:28:19Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.2/TrackerTalk-Setup-0.8.2.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Recupera automaticamente as conversas de quem vinha do VisionCLI, sem sobrescrever nem apagar nada, e torna a leitura dos metadados tolerante a BOM."
     },
     {

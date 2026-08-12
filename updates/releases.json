@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.2",
+      "published_at": "2026-08-12T17:28:19Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.2/TrackerTalk-Setup-0.8.2.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.2",
+      "sha256": "8C35BC1B7ABF00AC524E1DA695A4DBFE5A16572D96313FE48D80E29575A8F271",
+      "size": 53887970,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Recupera automaticamente as conversas de quem vinha do VisionCLI, sem sobrescrever nem apagar nada, e torna a leitura dos metadados tolerante a BOM."
+    },
+    {
       "version": "0.8.1",
       "published_at": "2026-08-11T21:26:08Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.1/TrackerTalk-Setup-0.8.1.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Guia em vídeo refeito com telas reais do painel, em sete etapas, sem a barra de progresso duplicada e com a duração reconhecida pelo player."
     },
     {

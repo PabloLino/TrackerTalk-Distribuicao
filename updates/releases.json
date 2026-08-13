@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.5",
+      "published_at": "2026-08-13T21:00:28Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.5/TrackerTalk-Setup-0.8.5.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.5",
+      "sha256": "274F9CDD190F1D2F85856A7EAC45D4041C77C26E9C537F43EB05C9D68FB5427F",
+      "size": 53904857,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Mantém a verificação de atualizações ativa enquanto o agente estiver em execução, sem depender de reiniciar o computador, preservando o limite de uma consulta por dia e de um aviso por versão."
+    },
+    {
       "version": "0.8.4",
       "published_at": "2026-08-13T20:34:41Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.4/TrackerTalk-Setup-0.8.4.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Mostra na leitura onde está cada mensagem enviada, com salto direto entre elas, coloca as imagens preservadas a um clique e faz o retorno do leitor cair nos rastreios salvos, no cartão de origem."
     },
     {

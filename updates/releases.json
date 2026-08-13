@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.4",
+      "published_at": "2026-08-13T20:34:41Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.4/TrackerTalk-Setup-0.8.4.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.4",
+      "sha256": "DD70E8DB5C0A590F77686FBF005F8ADEC486091960916E1D2208537C6EF34FF8",
+      "size": 53902494,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Mostra na leitura onde está cada mensagem enviada, com salto direto entre elas, coloca as imagens preservadas a um clique e faz o retorno do leitor cair nos rastreios salvos, no cartão de origem."
+    },
+    {
       "version": "0.8.3",
       "published_at": "2026-08-12T20:06:43Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.3/TrackerTalk-Setup-0.8.3.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Adiciona os adaptadores do Antigravity CLI (agy), sucessor do Gemini CLI, e do Grok, mantém o Gemini legado e amplia o diagnóstico do comando doctor."
     },
     {

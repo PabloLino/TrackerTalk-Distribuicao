@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.7",
+      "published_at": "2026-08-14T18:18:05Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.7/TrackerTalk-Setup-0.8.7.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.7",
+      "sha256": "213D867E8A1E2FF78D97BF6A58C2C193D8C6E8F06C2B1CB21BAB4AA7E1E78347",
+      "size": 53907824,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Mostra o título renomeado imediatamente, torna as abas do painel anunciáveis por leitores de tela e responde ao pedido de favicon.ico sem deixar erro no console."
+    },
+    {
       "version": "0.8.6",
       "published_at": "2026-08-14T13:34:00Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.6/TrackerTalk-Setup-0.8.6.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Explica o motivo quando uma conversa em execução impede a substituição do programa, oferecendo nova tentativa, em vez de falhar com o erro genérico de cópia do Windows."
     },
     {

@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.6",
+      "published_at": "2026-08-14T13:34:00Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.6/TrackerTalk-Setup-0.8.6.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.6",
+      "sha256": "AC262D116070B6C9E51F29D096D00C26DF46F583FE64BB2840693114E01B085F",
+      "size": 53907250,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Explica o motivo quando uma conversa em execução impede a substituição do programa, oferecendo nova tentativa, em vez de falhar com o erro genérico de cópia do Windows."
+    },
+    {
       "version": "0.8.5",
       "published_at": "2026-08-13T21:00:28Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.5/TrackerTalk-Setup-0.8.5.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Mantém a verificação de atualizações ativa enquanto o agente estiver em execução, sem depender de reiniciar o computador, preservando o limite de uma consulta por dia e de um aviso por versão."
     },
     {

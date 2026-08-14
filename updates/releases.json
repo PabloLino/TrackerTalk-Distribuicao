@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.8",
+      "published_at": "2026-08-14T19:24:11Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.8/TrackerTalk-Setup-0.8.8.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.8",
+      "sha256": "0A881BE7101ECF59E78221F44D1861502705E25499A6FFD00528D97AA0CB59D7",
+      "size": 53907135,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Atualiza sem pedir que a conversa em andamento seja encerrada: o programa antigo é movido de lado e o novo ocupa o lugar, sem interromper nada."
+    },
+    {
       "version": "0.8.7",
       "published_at": "2026-08-14T18:18:05Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.7/TrackerTalk-Setup-0.8.7.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Mostra o título renomeado imediatamente, torna as abas do painel anunciáveis por leitores de tela e responde ao pedido de favicon.ico sem deixar erro no console."
     },
     {

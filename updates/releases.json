@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.8.9",
+      "published_at": "2026-08-14T21:27:42Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.9/TrackerTalk-Setup-0.8.9.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.8.9",
+      "sha256": "74F1063FDB136544808DFBB7D12B01257A2CA0E9024BF5E634A34639A7476EAC",
+      "size": 53912013,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Conversas longas deixam de aparecer desatualizadas: o leitor abre pelas mensagens mais recentes e carrega as anteriores sob demanda, sem descartar nenhuma."
+    },
+    {
       "version": "0.8.8",
       "published_at": "2026-08-14T19:24:11Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.8/TrackerTalk-Setup-0.8.8.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Atualiza sem pedir que a conversa em andamento seja encerrada: o programa antigo é movido de lado e o novo ocupa o lugar, sem interromper nada."
     },
     {

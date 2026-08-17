@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.0",
+      "published_at": "2026-08-17T17:55:42Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.0/TrackerTalk-Setup-0.9.0.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.0",
+      "sha256": "D67E63AB289CDF2087D3D4D0B650921542135BBAB4459CDB5C6910A5177BF9B5",
+      "size": 23256999,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Distribui os programas em pasta única, sem descompactar a cada início, reconhece o formato das conversas do Antigravity CLI e reúne os avisos de conversas detectadas em um só, com seleção no painel."
+    },
+    {
       "version": "0.8.9",
       "published_at": "2026-08-14T21:27:42Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.8.9/TrackerTalk-Setup-0.8.9.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Conversas longas deixam de aparecer desatualizadas: o leitor abre pelas mensagens mais recentes e carrega as anteriores sob demanda, sem descartar nenhuma."
     },
     {

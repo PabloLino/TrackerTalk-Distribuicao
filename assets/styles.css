@@ -1064,3 +1064,63 @@ h2 {
     animation: none !important;
   }
 }
+
+/* Guia visual: o vídeo saiu do aplicativo e passou a viver aqui, onde ajuda
+   quem ainda está decidindo se instala. "preload: none" evita baixar nove
+   megabytes de quem só passou pela página. */
+.video-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #05070b;
+  box-shadow: 0 26px 60px var(--shadow);
+}
+
+.tutorial-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #05070b;
+}
+
+.video-steps {
+  display: grid;
+  gap: 10px;
+  margin: 26px 0 0;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(232px, 100%), 1fr));
+  counter-reset: etapa;
+  list-style: none;
+}
+
+.video-steps li {
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.video-steps li::before {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 9px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: #06251c;
+  counter-increment: etapa;
+  content: counter(etapa);
+  font-size: 12px;
+  font-weight: 800;
+  place-items: center;
+}
+
+.video-steps strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--text);
+  font-size: 15px;
+}

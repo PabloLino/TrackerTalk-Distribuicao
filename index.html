@@ -43,9 +43,9 @@
   <main id="conteudo">
     <section class="container hero">
       <div class="hero-copy">
-        <p class="eyebrow">Gratuito para Windows · dados locais</p>
-        <h1>Seu contexto não termina quando o terminal fecha.</h1>
-        <p>O TrackerTalk organiza conversas iniciadas em CLIs de IA, preserva uma cópia local e entrega o caminho certo para você continuar trabalhando sem reconstruir todo o assunto.</p>
+        <h1 class="eyebrow">Gratuito para Windows · dados locais</h1>
+        <p>Para quem usa Claude Code, Codex, Antigravity e outros assistentes pelo terminal. Ao encerrar uma conversa, esses CLIs mostram um identificador que permite retomá-la depois &mdash; e é justamente ele que se perde quando a janela fecha sozinha.</p>
+        <p>O TrackerTalk fica na área de notificação, pergunta se você quer preservar cada conversa e mantém uma cópia local enquanto você trabalha. Depois, um painel reúne todas elas, de todos os CLIs, com o comando exato para continuar de onde parou.</p>
         <div class="hero-actions">
           <a class="button" data-download href="https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/latest">Baixar para Windows</a>
           <a class="button secondary" href="#como-funciona">Entender como funciona</a>
@@ -99,8 +99,7 @@
 
     <section id="problema" class="container section">
       <div class="section-head">
-        <p class="eyebrow">O problema</p>
-        <h2>O identificador só aparece no fim &mdash; e nem sempre existe um fim.</h2>
+        <h2 class="eyebrow">O problema</h2>
         <p>Ao encerrar uma conversa, a maioria dos CLIs mostra o identificador que permite retomá-la depois. É com ele que se volta ao assunto, com <code>codex resume</code>, <code>claude --resume</code> e equivalentes. O problema é o que acontece quando esse encerramento não é você quem escolhe.</p>
       </div>
       <div class="feature-grid">
@@ -124,8 +123,7 @@
 
     <section id="recursos" class="container section">
       <div class="section-head">
-        <p class="eyebrow">Continuidade sem atrito</p>
-        <h2>Uma camada de segurança para o trabalho feito no terminal.</h2>
+        <h2 class="eyebrow">Continuidade sem atrito</h2>
         <p>O TrackerTalk acompanha o que os próprios provedores já registram e organiza tudo em uma experiência única.</p>
       </div>
       <div class="feature-grid">
@@ -164,21 +162,54 @@
 
     <section id="como-funciona" class="container section">
       <div class="section-head center">
-        <p class="eyebrow">Como funciona</p>
-        <h2>Do terminal ao contexto recuperável em três passos.</h2>
+        <h2 class="eyebrow">Como funciona</h2>
+        <p>Depois de instalar, você continua abrindo o Codex, o Claude Code ou o Antigravity exatamente como abre hoje. O TrackerTalk trabalha ao lado, não no meio.</p>
       </div>
       <div class="steps">
         <article class="step">
-          <h3>Instale e deixe na bandeja</h3>
-          <p>O agente inicia com o Windows por padrão, pode ser desativado a qualquer momento e fica disponível na área de notificação.</p>
+          <h3>Ele percebe a conversa</h3>
+          <p>Os próprios CLIs já gravam a conversa em disco enquanto ela acontece. O agente nota quando isso começa e pergunta, fora do terminal, se você quer preservar aquela conversa. Você responde quando quiser: nada é rastreado sem a sua resposta.</p>
         </article>
         <article class="step">
-          <h3>Escolha o que rastrear</h3>
-          <p>Quando uma conversa de IA estiver aberta, você decide pela interface se deseja criar e acompanhar uma cópia local.</p>
+          <h3>Copia enquanto você trabalha</h3>
+          <p>Dizendo que sim, ele passa a copiar a transcrição a cada alteração, junto com as imagens que você anexou, e dá àquela conversa um identificador próprio. Você não precisa anotar nada, e o arquivo original do provedor nunca é alterado.</p>
         </article>
         <article class="step">
-          <h3>Retome quando precisar</h3>
-          <p>Consulte o painel, leia o histórico formatado, copie o comando ou abra uma nova janela de terminal com a retomada correta.</p>
+          <h3>Você volta quando precisar</h3>
+          <p>O painel local mostra todas as conversas, de todos os CLIs, com projeto, provedor, data, situação e assunto. Dá para buscar por palavra &mdash; inclusive dentro das mensagens &mdash;, ler a conversa completa com código e imagens, copiar o comando de retomada ou abrir um terminal já com ele.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="continuar" class="container section">
+      <div class="section-head">
+        <h2 class="eyebrow">Continuar com outro assistente</h2>
+        <p>Às vezes você começa no Codex, esbarra em alguma coisa e queria a opinião do Claude. Normalmente isso significa explicar tudo de novo.</p>
+        <p>No TrackerTalk é um botão. Ele monta um pacote com o histórico que já está preservado, abre o CLI que você escolher e entrega esse contexto ao novo assistente com uma instrução clara: primeiro entenda o que já foi feito, apresente o entendimento e espere uma nova orientação &mdash; sem sair executando pendências antigas por conta própria.</p>
+        <p>A conversa original continua intacta, a nova também passa a ser preservada, e o painel mostra a ramificação entre as duas. Dá para ver quem nasceu de quem.</p>
+      </div>
+    </section>
+
+    <section id="limites" class="container section">
+      <div class="section-head">
+        <h2 class="eyebrow">O que ele não faz</h2>
+        <p>Esta parte importa tanto quanto a de cima. O TrackerTalk observa arquivos que os provedores já gravam &mdash; e só isso.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">⊘</span>
+          <h3>Não envia nada para fora</h3>
+          <p>Sem conta, sem login, sem nuvem e sem API do TrackerTalk. As conversas ficam na sua máquina, e o painel escuta apenas em 127.0.0.1.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">⊘</span>
+          <h3>Não altera os arquivos do provedor</h3>
+          <p>Ele copia. A transcrição original de cada CLI permanece exatamente como está, e os comandos oficiais continuam funcionando do mesmo jeito.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true">⊘</span>
+          <h3>Não interfere no terminal</h3>
+          <p>Não captura a tela, não lê o que você digita, não escreve no terminal e nunca encerra um CLI em execução &mdash; nem para se atualizar.</p>
         </article>
       </div>
     </section>
@@ -186,8 +217,7 @@
     <section class="container section">
       <div class="privacy-band">
         <div>
-          <p class="eyebrow">Privacidade por arquitetura</p>
-          <h2>Suas conversas permanecem na sua máquina.</h2>
+          <h2 class="eyebrow">Privacidade por arquitetura</h2>
           <p>O TrackerTalk não precisa de conta própria, não envia o conteúdo das conversas para um servidor do produto e não substitui os CLIs oficiais. A verificação futura de atualização consultará somente um pequeno manifesto público de versão.</p>
         </div>
         <div class="privacy-mark" aria-hidden="true">⌂</div>
@@ -196,21 +226,21 @@
 
     <section class="container section">
       <div class="section-head">
-        <p class="eyebrow">Catálogo atual</p>
-        <h2>Um painel para diferentes assistentes de terminal.</h2>
+        <h2 class="eyebrow">Catálogo atual</h2>
       </div>
       <div class="provider-list">
         <article class="provider"><strong>Codex CLI</strong><span>Rastreio e retomada por sessão</span></article>
         <article class="provider"><strong>Claude Code</strong><span>Histórico e retomada nativa</span></article>
-        <article class="provider"><strong>Gemini CLI</strong><span>Snapshot local por projeto</span></article>
+        <article class="provider"><strong>Antigravity CLI</strong><span>Sucessor do Gemini CLI, comando <code>agy</code></span></article>
         <article class="provider"><strong>GitHub Copilot CLI</strong><span>Adaptador de histórico e sessão</span></article>
+        <article class="provider"><strong>Grok</strong><span>Sessões locais e retomada por ID</span></article>
+        <article class="provider"><strong>Gemini CLI</strong><span>Mantido para quem tem histórico antigo</span></article>
       </div>
     </section>
 
     <section id="versoes" class="container section">
       <div class="section-head">
-        <p class="eyebrow">Downloads verificáveis</p>
-        <h2>Versão atual e histórico em um só lugar.</h2>
+        <h2 class="eyebrow">Downloads verificáveis</h2>
         <p>Cada instalador tem número próprio, notas e SHA-256. Versões anteriores permanecem disponíveis para consulta e download.</p>
       </div>
       <div class="release-panel">
@@ -243,8 +273,7 @@
     <section class="container section">
       <div class="download-panel">
         <div>
-          <p class="eyebrow">Pronto para começar</p>
-          <h2>Instale em poucos minutos e continue usando seus CLIs normalmente.</h2>
+          <h2 class="eyebrow">Pronto para começar</h2>
           <p>O instalador é por usuário, inclui as dependências e não exige Python ou Git na máquina de destino.</p>
           <ul class="requirements">
             <li>Windows 10 ou 11</li>
@@ -262,8 +291,7 @@
 
     <section id="faq" class="container section">
       <div class="section-head center">
-        <p class="eyebrow">Perguntas frequentes</p>
-        <h2>O essencial antes de instalar.</h2>
+        <h2 class="eyebrow">Perguntas frequentes</h2>
       </div>
       <div class="faq">
         <details>

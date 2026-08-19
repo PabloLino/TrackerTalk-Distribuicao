@@ -253,6 +253,17 @@ img {
   text-transform: uppercase;
 }
 
+/* As seções são anunciadas pela etiqueta curta, e não por uma frase em corpo
+   gigante: a página passou a explicar no texto corrido, onde cabe explicar. */
+h1.eyebrow,
+h2.eyebrow {
+  max-width: none;
+  font-size: 12px;
+  font-weight: 820;
+  letter-spacing: .08em;
+  line-height: 1.65;
+}
+
 .eyebrow::before {
   width: 7px;
   height: 7px;

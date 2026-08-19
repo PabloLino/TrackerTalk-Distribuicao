@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.1",
+      "published_at": "2026-08-19T15:39:13Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.1/TrackerTalk-Setup-0.9.1.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.1",
+      "sha256": "D4D06F7563E8B6309E9E5D3E031762C2B4A9DE3348FD0B167D1B83D6C2FFBE59",
+      "size": 13849065,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Tira o guia em vídeo do programa, que passa a viver na página de distribuição, e reduz o instalador de 23,3 MB para 13,8 MB."
+    },
+    {
       "version": "0.9.0",
       "published_at": "2026-08-17T17:55:42Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.0/TrackerTalk-Setup-0.9.0.exe",
@@ -14,7 +28,7 @@
       "architecture": "x64",
       "data_schema": 1,
       "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
-      "supported": true,
+      "supported": false,
       "summary": "Distribui os programas em pasta única, sem descompactar a cada início, reconhece o formato das conversas do Antigravity CLI e reúne os avisos de conversas detectadas em um só, com seleção no painel."
     },
     {

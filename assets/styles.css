@@ -41,6 +41,11 @@
 }
 
 html {
+  /* O mascote avança de propósito para fora do cartão do topo; em telas
+     estreitas isso passava da borda da janela. "clip" apara o excesso sem
+     criar um contexto de rolagem, que é o que "hidden" faria — e quebraria
+     o cabeçalho fixo. */
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
 }

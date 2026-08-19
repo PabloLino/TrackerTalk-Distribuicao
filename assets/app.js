@@ -55,16 +55,6 @@ function formatBytes(value) {
   }).format(bytes / 1_000_000);
 }
 
-function formatDate(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return 'data não informada';
-  return new Intl.DateTimeFormat('pt-BR', {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric'
-  }).format(date);
-}
-
 function setText(selector, value) {
   const element = $(selector);
   if (element) element.textContent = value;
@@ -79,7 +69,6 @@ function applyLatest(release) {
   $$('[data-version]').forEach(element => {
     element.textContent = release.version;
   });
-  setText('#releaseDate', formatDate(release.published_at));
   setText('#releaseSize', formatBytes(release.size));
   setText('#releaseHash', release.sha256 || 'não informado');
   setText('#releaseLicense', release.license || 'consulte a Release');
@@ -106,7 +95,6 @@ function releaseCard(release) {
   const meta = document.createElement('p');
   meta.className = 'release-meta';
   meta.textContent = [
-    formatDate(release.published_at),
     formatBytes(release.size),
     release.license || 'licença na Release'
   ].join(' · ');

@@ -2,6 +2,10 @@ const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
 const allowedDownloadHost = 'github.com';
+// Fixar apenas o dominio deixaria passar qualquer repositorio do GitHub.
+const allowedDownloadPath = '/PabloLino/TrackerTalk-Distribuicao/';
+// Um catalogo com milhares de registros travaria a pagina ao desenhar.
+const maxReleases = 100;
 const themeKey = 'trackertalk-site-theme';
 const fallbackDownload = 'https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/latest';
 
@@ -38,7 +42,9 @@ function toggleTheme() {
 function safeDownloadUrl(value) {
   try {
     const parsed = new URL(value);
-    if (parsed.protocol !== 'https:' || parsed.hostname !== allowedDownloadHost) return fallbackDownload;
+    if (parsed.protocol !== 'https:'
+      || parsed.hostname !== allowedDownloadHost
+      || !parsed.pathname.startsWith(allowedDownloadPath)) return fallbackDownload;
     return parsed.href;
   } catch (error) {
     return fallbackDownload;
@@ -137,7 +143,8 @@ async function loadReleaseData() {
     const catalog = await releasesResponse.json();
     applyLatest(latest);
     list.replaceChildren();
-    (catalog.releases || []).forEach(release => list.appendChild(releaseCard(release)));
+    const releases = Array.isArray(catalog.releases) ? catalog.releases : [];
+    releases.slice(0, maxReleases).forEach(release => list.appendChild(releaseCard(release)));
     status.textContent = 'Catálogo verificado';
     status.classList.add('ok');
   } catch (error) {
@@ -177,6 +184,21 @@ function configureNavigation() {
   });
 }
 
+function blockFraming() {
+  if (window.top === window.self) return;
+  try {
+    window.top.location.replace(window.self.location.href);
+  } catch (error) {
+    // A pagina que enquadra pode impedir a navegacao. Entao o conteudo sai de
+    // cena, para nao servir de isca sob uma sobreposicao de outra pessoa.
+    const aviso = document.createElement('p');
+    aviso.textContent = 'Abra o TrackerTalk no site oficial: '
+      + 'https://pablolino.github.io/TrackerTalk-Distribuicao/';
+    document.body.replaceChildren(aviso);
+  }
+}
+
+blockFraming();
 applyTheme(storedTheme());
 $('#themeToggle')?.addEventListener('click', toggleTheme);
 $('#copyHash')?.addEventListener('click', copyHash);

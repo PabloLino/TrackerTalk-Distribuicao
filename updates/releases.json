@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.4",
+      "published_at": "2026-08-27T12:13:02Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.4/TrackerTalk-Setup-0.9.4.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.4",
+      "sha256": "130FB5D20CDDA495568CAE0AD04959DFBEBFBA7361B40D472716A043A56AEC3A",
+      "size": 13806287,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Centraliza as abas, acrescenta filtros por projeto, imagens e ramificação, ganha ícone próprio e corrige a perda de imagens em pastas de caminho longo."
+    },
+    {
       "version": "0.9.3",
       "published_at": "2026-08-21T17:17:15Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.3/TrackerTalk-Setup-0.9.3.exe",

@@ -51,7 +51,8 @@
           <a class="button" data-download href="https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/latest">Baixar para Windows</a>
           <a class="button secondary" href="#como-funciona">Entender como funciona</a>
         </div>
-        <p class="download-meta">Versão <strong data-version>0.9.3</strong> · Windows 10/11 x64 · instalação por usuário</p>
+        <p class="download-meta">Versão <strong data-version>0.9.4</strong> · Windows 10/11 x64 · instalação por usuário</p>
+        <p class="download-note">O Windows pede uma confirmação a mais. <a href="#aviso">Por quê</a></p>
         <ul class="trust-list" aria-label="Características">
           <li>Sem conta</li>
           <li>Sem servidor próprio</li>
@@ -272,18 +273,18 @@
         <div class="current-release">
           <div>
             <span class="release-kicker">Versão estável atual</span>
-            <h3>TrackerTalk <span data-version>0.9.3</span></h3>
-            <p><span id="releaseSize">13,9 MB</span> · licença <span id="releaseLicense">proprietária gratuita</span></p>
+            <h3>TrackerTalk <span data-version>0.9.4</span></h3>
+            <p><span id="releaseSize">13,8 MB</span> · licença <span id="releaseLicense">proprietária gratuita</span></p>
           </div>
           <div class="release-current-actions">
             <a class="button" data-download href="https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/latest">Baixar instalador</a>
-            <a id="releaseNotes" class="text-link" href="https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.3">Ler notas da versão</a>
+            <a id="releaseNotes" class="text-link" href="https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.4">Ler notas da versão</a>
             <span id="manifestStatus" class="manifest-status" aria-live="polite">Verificando catálogo…</span>
           </div>
         </div>
         <div class="hash-box">
           <span>SHA-256</span>
-          <code id="releaseHash">3ED1CFA9755656A1CB422542A59B089536738164F97648F87A5CFF6251D0DFCA</code>
+          <code id="releaseHash">130FB5D20CDDA495568CAE0AD04959DFBEBFBA7361B40D472716A043A56AEC3A</code>
           <div>
             <button id="copyHash" class="copy-button" type="button">Copiar</button>
             <span id="copyStatus" class="copy-status" aria-live="polite"></span>
@@ -292,6 +293,32 @@
         <div id="releaseList" class="release-list">
           <p class="muted">Carregando versões…</p>
         </div>
+      </div>
+    </section>
+
+    <section id="aviso" class="container section">
+      <div class="section-head">
+        <h2 class="eyebrow">Sobre o aviso do Windows</h2>
+        <p>Ele aparece, e é melhor você saber disso antes de baixar do que ser surpreendido no meio do caminho.</p>
+      </div>
+      <div class="warning-grid">
+        <article class="warning-step">
+          <span class="warning-when">Ao baixar</span>
+          <p>O navegador pode segurar o arquivo e pedir que você confirme se quer mesmo mantê-lo. Em geral é um botão <strong>Manter</strong> ou <strong>Keep</strong>, às vezes escondido atrás dos três pontinhos ao lado do download.</p>
+        </article>
+        <article class="warning-step">
+          <span class="warning-when">Ao executar</span>
+          <p>Uma tela azul diz que <strong>o Windows protegeu o seu computador</strong>. O botão para prosseguir não fica à vista: clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong>.</p>
+        </article>
+      </div>
+      <div class="warning-why">
+        <h3>Por que isso acontece</h3>
+        <p>Nenhum dos dois avisos diz que existe algo de errado com o arquivo. Eles dizem que o programa <strong>não tem assinatura digital</strong>, que é um certificado pago usado para provar quem publicou o instalador. Sem ele, o Windows trata qualquer programa novo como desconhecido, independentemente do que ele faça.</p>
+        <p>O TrackerTalk ainda não tem esse certificado. Enquanto não tiver, os avisos vão continuar aparecendo, e seria desonesto afirmar o contrário. O que dá para fazer é deixar você em condições de conferir por conta própria, sem precisar acreditar em nós.</p>
+        <h3>Como conferir que o arquivo é o nosso</h3>
+        <p>O instalador é publicado nas Releases oficiais do projeto no GitHub, e a página acima mostra o SHA-256 de cada versão. Esse número muda por completo se um único byte do arquivo for diferente. Para comparar, abra o PowerShell na pasta do download e execute:</p>
+        <pre class="warning-code"><code>Get-FileHash .\TrackerTalk-Setup-<span data-version>0.9.4</span>.exe -Algorithm SHA256</code></pre>
+        <p>Se o resultado for igual ao SHA-256 publicado, o arquivo que está no seu computador é exatamente o que foi compilado e publicado aqui. Se for diferente, não execute.</p>
       </div>
     </section>
 
@@ -317,8 +344,8 @@
           <p>Sim. Todas as versões publicadas ficam na página de Releases. Um instalador antigo pode não compreender formatos de dados criados por versões futuras; consulte sempre as notas de compatibilidade.</p>
         </details>
         <details>
-          <summary>Por que o Windows pode mostrar um aviso?</summary>
-          <p>O instalador atual ainda não possui assinatura Authenticode. Confira se o download veio desta página oficial e compare o SHA-256 antes de executar.</p>
+          <summary>Por que o Windows mostra um aviso?</summary>
+          <p>Porque o instalador ainda não tem assinatura digital, e não porque exista algo de errado com ele. O aviso aparece ao baixar e ao executar. <a href="#aviso">A seção sobre o aviso</a> mostra o que aparece em cada momento, o que clicar e como comparar o SHA-256 antes de executar.</p>
         </details>
         <details>
           <summary>Como removo o TrackerTalk?</summary>

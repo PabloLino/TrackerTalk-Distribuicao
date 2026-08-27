@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.5",
+      "published_at": "2026-08-27T12:46:51Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.5/TrackerTalk-Setup-0.9.5.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.5",
+      "sha256": "51014D056CBCC220561D43664A2387DA296A83A176F4CFB114AFEAF29F5CDBF1",
+      "size": 13806876,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Corrige o filtro por projeto, que repetia o mesmo nome de pasta para quem mantém várias cópias de trabalho do mesmo repositório."
+    },
+    {
       "version": "0.9.4",
       "published_at": "2026-08-27T12:13:02Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.4/TrackerTalk-Setup-0.9.4.exe",

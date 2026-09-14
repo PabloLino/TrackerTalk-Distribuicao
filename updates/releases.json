@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.10",
+      "published_at": "2026-09-14T20:15:45Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.10/TrackerTalk-Setup-0.9.10.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.10",
+      "sha256": "6F524F69B2039FA5D445F716D1D64DBD43C37B74A90334AE260496C5804E08C7",
+      "size": 14537068,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "O opencode entra na lista de CLIs rastreados: conversas, leitor, retomada e atividade ao vivo."
+    },
+    {
       "version": "0.9.9",
       "published_at": "2026-09-14T19:24:11Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.9/TrackerTalk-Setup-0.9.9.exe",

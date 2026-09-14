@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.8",
+      "published_at": "2026-09-14T19:04:17Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.8/TrackerTalk-Setup-0.9.8.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.8",
+      "sha256": "170A359D143E3C7EDD5C94C9AE585C2481C581044E5637218DD0530BAE91E2DE",
+      "size": 13829530,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "A pasta passa a ser escolhida pelo seletor do proprio Windows, em vez de digitada."
+    },
+    {
       "version": "0.9.7",
       "published_at": "2026-09-14T17:59:27Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.7/TrackerTalk-Setup-0.9.7.exe",

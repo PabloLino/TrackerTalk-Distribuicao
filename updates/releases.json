@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.7",
+      "published_at": "2026-09-14T17:59:27Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.7/TrackerTalk-Setup-0.9.7.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.7",
+      "sha256": "70B617649A1C11BEA2265B7217BA4A37A45034DB73203F3A724A9D38172F1B7F",
+      "size": 13828380,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Uma conversa rastreada pode ser continuada em outra pasta, e a pasta de origem continua gravada como registro."
+    },
+    {
       "version": "0.9.6",
       "published_at": "2026-08-27T14:11:50Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.6/TrackerTalk-Setup-0.9.6.exe",

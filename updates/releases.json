@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.9",
+      "published_at": "2026-09-14T19:24:11Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.9/TrackerTalk-Setup-0.9.9.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.9",
+      "sha256": "8DA963B3C622C12F001809480DA225D8262EB884A849EB713FDF099BD107EFFD",
+      "size": 13827809,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "O campo de pasta passa a dizer para que serve, com um rótulo por diálogo e uma linha sobre quando trocar."
+    },
+    {
       "version": "0.9.8",
       "published_at": "2026-09-14T19:04:17Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.8/TrackerTalk-Setup-0.9.8.exe",

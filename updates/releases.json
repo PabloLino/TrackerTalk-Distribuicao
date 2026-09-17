@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.12",
+      "published_at": "2026-09-17T21:09:28Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.12/TrackerTalk-Setup-0.9.12.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.12",
+      "sha256": "90E17F7249B3656B31E488BAA25E45F673F88861717C214F6F83136C1479674B",
+      "size": 14541774,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "A conversa de destino de uma continuidade volta a ler o contexto que recebeu, no Codex e no opencode."
+    },
+    {
       "version": "0.9.11",
       "published_at": "2026-09-17T15:52:14Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.11/TrackerTalk-Setup-0.9.11.exe",

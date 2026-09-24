@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.13",
+      "published_at": "2026-09-24T15:52:26Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.13/TrackerTalk-Setup-0.9.13.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.13",
+      "sha256": "409FD25F624160DB5EECE84440ACF35F4CA0F3A8C67F42813E04210D7397B42B",
+      "size": 14555206,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Imagens aparecem na mensagem em que foram enviadas e a continuidade volta a levar a conversa inteira."
+    },
+    {
       "version": "0.9.12",
       "published_at": "2026-09-17T21:09:28Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.12/TrackerTalk-Setup-0.9.12.exe",

@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.9.14",
+      "published_at": "2026-09-30T13:35:52Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.14/TrackerTalk-Setup-0.9.14.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.9.14",
+      "sha256": "A7FB266071CE1FA96EA7ECC35FCA9DDBC77467EE2A16923B346A7FD04FA100C3",
+      "size": 14559425,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Retomar uma conversa do Codex como administrador volta a funcionar, depois que o Codex passou a recusar o servidor compartilhado em terminal elevado."
+    },
+    {
       "version": "0.9.13",
       "published_at": "2026-09-24T15:52:26Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.9.13/TrackerTalk-Setup-0.9.13.exe",

@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.10.1",
+      "published_at": "2026-10-08T13:36:40Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.1/TrackerTalk-Setup-0.10.1.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.10.1",
+      "sha256": "136D1D1BE1E4CF83C526507F0C4B0231845E8302048976980993A46B03A86251",
+      "size": 14601232,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Uma conversa do Claude Code que passa para outro arquivo deixa de pedir rastreio de novo e continua sendo copiada no mesmo rastreio."
+    },
+    {
       "version": "0.10.0",
       "published_at": "2026-10-06T17:18:52Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.0/TrackerTalk-Setup-0.10.0.exe",

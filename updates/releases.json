@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.10.2",
+      "published_at": "2026-10-19T18:42:05Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.2/TrackerTalk-Setup-0.10.2.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.10.2",
+      "sha256": "0E37C5FC17A4D9B1520918AF02B135B793688831908F3AB5BDAFF61AB7C888C7",
+      "size": 14597845,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Uma conversa rastreada não para mais de ser copiada com o terminal aberto, como acontecia no Codex quando a primeira mensagem demorava a ser enviada."
+    },
+    {
       "version": "0.10.1",
       "published_at": "2026-10-08T13:36:40Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.1/TrackerTalk-Setup-0.10.1.exe",

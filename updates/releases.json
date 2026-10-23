@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.10.3",
+      "published_at": "2026-10-23T20:09:46Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.3/TrackerTalk-Setup-0.10.3.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.10.3",
+      "sha256": "14F7D28E6D4B32C4E10B2664DBD03453CF06CC3496CAB570FA51CBE0DBD38502",
+      "size": 14623001,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Com vários terminais abertos, o painel mostra em qual deles está a conversa: o botão Mostrar terminal traz a janela dela para a frente."
+    },
+    {
       "version": "0.10.2",
       "published_at": "2026-10-19T18:42:05Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.2/TrackerTalk-Setup-0.10.2.exe",

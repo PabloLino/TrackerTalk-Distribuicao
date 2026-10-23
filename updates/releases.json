@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.10.4",
+      "published_at": "2026-10-23T21:13:43Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.4/TrackerTalk-Setup-0.10.4.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.10.4",
+      "sha256": "FCD56C4B3E65767DD08BBDE6B6F28D758744D8CFF77534DFD135E18055CB1AE3",
+      "size": 14623857,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Atualizar deixa de repetir as perguntas da instalação: pela bandeja, a atualização é expressa e reabre o TrackerTalk ao terminar."
+    },
+    {
       "version": "0.10.3",
       "published_at": "2026-10-23T20:09:46Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.3/TrackerTalk-Setup-0.10.3.exe",

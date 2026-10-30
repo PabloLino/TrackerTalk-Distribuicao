@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.11.0",
+      "published_at": "2026-10-30T19:53:20Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.11.0/TrackerTalk-Setup-0.11.0.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.11.0",
+      "sha256": "65548AE55A2CEE7869F8AB48F5C0AFC85B7B2246730B3FB20762F90F6B0CE463",
+      "size": 14659347,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Alertas de decisão de Claude Code e Codex no Windows, com aviso breve na barra de tarefas e destaque no painel até a resposta."
+    },
+    {
       "version": "0.10.6",
       "published_at": "2026-10-30T19:04:03Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.10.6/TrackerTalk-Setup-0.10.6.exe",

@@ -4,6 +4,20 @@
   "channel": "stable",
   "releases": [
     {
+      "version": "0.11.2",
+      "published_at": "2026-11-03T19:21:40Z",
+      "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.11.2/TrackerTalk-Setup-0.11.2.exe",
+      "release_notes_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/tag/v0.11.2",
+      "sha256": "AC49752504371313B99BBABA7CBA086A4A5AAA4FC2C83694F106C3C3BC46174E",
+      "size": 15246243,
+      "minimum_windows": "10",
+      "architecture": "x64",
+      "data_schema": 1,
+      "license": "Licença de Uso Gratuito do TrackerTalk 1.0",
+      "supported": true,
+      "summary": "Corrige a identificação da conversa que aguarda resposta, vinculando o alerta ao ID nativo da sessão Claude."
+    },
+    {
       "version": "0.11.1",
       "published_at": "2026-11-03T14:42:10Z",
       "installer_url": "https://github.com/PabloLino/TrackerTalk-Distribuicao/releases/download/v0.11.1/TrackerTalk-Setup-0.11.1.exe",

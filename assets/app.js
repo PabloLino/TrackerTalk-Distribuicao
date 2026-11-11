@@ -82,7 +82,7 @@ function applyLatest(release) {
   if (notes) notes.href = safeDownloadUrl(release.release_notes_url);
 }
 
-function releaseCard(release) {
+function releaseCard(release, latestVersion) {
   const article = document.createElement('article');
   article.className = 'release-item';
 
@@ -94,8 +94,10 @@ function releaseCard(release) {
   heading.appendChild(version);
 
   const status = document.createElement('span');
-  status.className = 'release-status ' + (release.supported ? 'supported' : 'legacy');
-  status.textContent = release.supported ? 'Atual' : 'Histórica';
+  // Suporte a uma versão anterior não a torna a versão estável atual.
+  const isCurrent = release.version === latestVersion;
+  status.className = 'release-status ' + (isCurrent ? 'current' : 'legacy');
+  status.textContent = isCurrent ? 'Atual' : 'Histórica';
   heading.appendChild(status);
 
   const meta = document.createElement('p');
@@ -144,7 +146,7 @@ async function loadReleaseData() {
     applyLatest(latest);
     list.replaceChildren();
     const releases = Array.isArray(catalog.releases) ? catalog.releases : [];
-    releases.slice(0, maxReleases).forEach(release => list.appendChild(releaseCard(release)));
+    releases.slice(0, maxReleases).forEach(release => list.appendChild(releaseCard(release, latest.version)));
     status.textContent = 'Catálogo verificado';
     status.classList.add('ok');
   } catch (error) {

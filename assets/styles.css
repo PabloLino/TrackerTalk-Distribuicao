@@ -794,7 +794,7 @@ h2 {
   font-size: 10px;
 }
 
-.release-status.supported {
+.release-status.current {
   border-color: #3c6d5d;
   color: var(--mint);
 }

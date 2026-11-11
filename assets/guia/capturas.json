@@ -1,0 +1,17 @@
+{
+  "version": "0.11.2",
+  "source": "Painel real com dados de demonstração",
+  "width": 2880,
+  "height": 1800,
+  "files": [
+    "01-atividade.webp",
+    "02-rastreios.webp",
+    "03-detalhes.webp",
+    "04-busca.webp",
+    "05-continuar.webp",
+    "06-leitor.webp",
+    "07-anexos.webp",
+    "08-alertas.webp",
+    "09-configuracoes.webp"
+  ]
+}

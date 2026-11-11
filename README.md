@@ -18,6 +18,12 @@ O código-fonte do aplicativo TrackerTalk não faz parte deste repositório.
 - Versões: <https://github.com/PabloLino/TrackerTalk-Distribuicao/releases>
 - Manifesto atual: <https://pablolino.github.io/TrackerTalk-Distribuicao/updates/latest.json>
 
+## Guia visual
+
+O guia combina um carrossel com nove capturas do painel real e um vídeo sem áudio, regravado sobre as mesmas telas. As conversas, os projetos e os anexos são fictícios. As capturas identificam a versão do aplicativo, em `assets/guia/capturas.json`, e podem ser ampliadas pelo visitante.
+
+Ao mudar a interface, gere novas capturas no projeto privado, confira cada função e atualize vídeo e capa com o mesmo material. Não recrie telas nem use conversas pessoais no material publicado. O carrossel deve manter navegação por teclado e toque, controle de reprodução e respeito a movimento reduzido.
+
 ## Publicação de uma versão
 
 Cada versão publicada deve ter:

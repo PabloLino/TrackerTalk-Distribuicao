@@ -187,13 +187,168 @@
     <section id="video" class="container section">
       <div class="section-head">
         <h2 class="eyebrow">Guia visual</h2>
-        <p>Um passeio de cerca de um minuto e meio pelas funções principais, gravado no painel de verdade. Sem áudio: o que precisa ser dito aparece escrito na tela.</p>
+        <p>Explore as funções em capturas do próprio TrackerTalk. Veja cada detalhe no carrossel e acompanhe o fluxo completo no vídeo.</p>
+      </div>
+      <div id="visualGuide" class="guide-carousel" role="region" aria-roledescription="carrossel" aria-label="Funções do TrackerTalk em capturas reais">
+        <div class="guide-toolbar">
+          <div class="guide-source"><strong>O painel, do jeito que ele é</strong><small>Capturas da versão 0.11.2 · dados de demonstração</small></div>
+          <div class="guide-controls" aria-label="Controles do carrossel">
+            <span id="guideCounter" class="guide-counter" aria-hidden="true">01 / 09</span>
+            <button id="guidePlayback" class="guide-control guide-playback" type="button" aria-label="Reproduzir capturas automaticamente" aria-pressed="false">Reproduzir</button>
+            <button id="guidePrevious" class="guide-control" type="button" aria-label="Captura anterior">←</button>
+            <button id="guideNext" class="guide-control" type="button" aria-label="Próxima captura">→</button>
+          </div>
+        </div>
+        <div class="guide-slides">
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="1 de 9: Atividade">
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/01-atividade.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Escolha o que preservar">
+                <img src="./assets/guia/01-atividade.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Aba Atividade agora do TrackerTalk com duas conversas de demonstração e botões para começar a rastrear.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">01 · Atividade</span>
+              <h3>Escolha o que preservar</h3>
+              <p>Veja as conversas abertas que ainda não estão sendo rastreadas. Você decide quais delas quer manter no TrackerTalk.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="2 de 9: Rastreios" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/02-rastreios.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Seu histórico em um só lugar">
+                <img src="./assets/guia/02-rastreios.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Rastreios salvos no painel real, com a conversa do Codex e sua continuação no Claude ligadas por uma ramificação.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">02 · Rastreios</span>
+              <h3>Seu histórico em um só lugar</h3>
+              <p>Encontre as conversas preservadas e organize por projeto. Uma continuação em outra IA aparece ligada à conversa de origem.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="3 de 9: Busca" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/04-busca.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Encontre o que foi dito">
+                <img src="./assets/guia/04-busca.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Busca por taxa regional no painel real, mostrando o botão Pesquisar e os trechos encontrados na conversa.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">03 · Busca</span>
+              <h3>Encontre o que foi dito</h3>
+              <p>Pesquise por título ou por palavras dentro das mensagens. O botão Pesquisar confirma a consulta e os resultados mostram os trechos encontrados.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="4 de 9: Leitor" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/06-leitor.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Releia a conversa completa">
+                <img src="./assets/guia/06-leitor.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Leitor real do TrackerTalk com perguntas, respostas e um bloco de código da conversa de demonstração.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">04 · Leitor</span>
+              <h3>Releia a conversa completa</h3>
+              <p>Perguntas, respostas, listas e blocos de código ficam organizados na ordem original. A navegação lateral ajuda a voltar às mensagens do usuário.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="5 de 9: Imagens" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/07-anexos.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Os anexos ficam com a conversa">
+                <img src="./assets/guia/07-anexos.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Galeria do leitor real com duas imagens de demonstração preservadas junto da conversa.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">05 · Imagens</span>
+              <h3>Os anexos ficam com a conversa</h3>
+              <p>Reveja as imagens preservadas na cópia local. Elas continuam disponíveis mesmo quando o arquivo original deixa de existir.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="6 de 9: Continuidade" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/05-continuar.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Leve o contexto para outra IA">
+                <img src="./assets/guia/05-continuar.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Diálogo real Continuar com outro LLM, com seletor de provedor e botão Criar continuidade.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">06 · Continuidade</span>
+              <h3>Leve o contexto para outra IA</h3>
+              <p>Escolha o assistente de destino. Ele recebe o histórico preservado para primeiro entender o contexto e aguardar sua próxima orientação.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="7 de 9: Detalhes" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/03-detalhes.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Confira a cópia que foi preservada">
+                <img src="./assets/guia/03-detalhes.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Cartão real expandido em Mostrar detalhes, com metadados, botão Visualizar conversa e miniaturas dos anexos.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">07 · Detalhes</span>
+              <h3>Confira a cópia que foi preservada</h3>
+              <p>Abra Mostrar detalhes para conferir pasta, identificadores e tamanho da cópia local. A conversa e suas imagens ficam acessíveis no mesmo cartão.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="8 de 9: Alertas" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/08-alertas.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Saiba quando a IA precisa de você">
+                <img src="./assets/guia/08-alertas.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Painel real com o destaque Aguardando sua resposta, a conversa correta e o botão Mostrar terminal.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">08 · Alertas</span>
+              <h3>Saiba quando a IA precisa de você</h3>
+              <p>Quando Claude Code ou Codex abre um diálogo que exige resposta, o painel destaca a conversa. Use Mostrar terminal para voltar a ela.</p>
+            </figcaption>
+          </figure>
+          <figure class="guide-slide" role="group" aria-roledescription="slide" aria-label="9 de 9: Configurações" hidden>
+            <div class="guide-display">
+              <a class="guide-shot" href="./assets/guia/09-configuracoes.webp" target="_blank" rel="noopener" aria-label="Ampliar captura: Ajuste o TrackerTalk pelo painel">
+                <img src="./assets/guia/09-configuracoes.webp" width="2880" height="1800" loading="lazy" decoding="async" alt="Aba Configurações real, com opções de detecção, inicialização, alertas de decisão, atualizações e aplicativo.">
+                <span class="guide-enlarge">Ampliar captura ↗</span>
+              </a>
+            </div>
+            <figcaption class="guide-caption">
+              <span class="guide-feature">09 · Configurações</span>
+              <h3>Ajuste o TrackerTalk pelo painel</h3>
+              <p>Gerencie detecção, inicialização com o Windows, alertas e atualizações. As mesmas opções da bandeja também estão no painel.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="guide-selectors" role="group" aria-label="Escolher uma função">
+          <button class="guide-selector" type="button" data-guide-slide="0" aria-pressed="true" aria-label="Ver captura 1: Atividade"><span aria-hidden="true">01</span>Atividade</button>
+          <button class="guide-selector" type="button" data-guide-slide="1" aria-pressed="false" aria-label="Ver captura 2: Rastreios"><span aria-hidden="true">02</span>Rastreios</button>
+          <button class="guide-selector" type="button" data-guide-slide="2" aria-pressed="false" aria-label="Ver captura 3: Busca"><span aria-hidden="true">03</span>Busca</button>
+          <button class="guide-selector" type="button" data-guide-slide="3" aria-pressed="false" aria-label="Ver captura 4: Leitor"><span aria-hidden="true">04</span>Leitor</button>
+          <button class="guide-selector" type="button" data-guide-slide="4" aria-pressed="false" aria-label="Ver captura 5: Imagens"><span aria-hidden="true">05</span>Imagens</button>
+          <button class="guide-selector" type="button" data-guide-slide="5" aria-pressed="false" aria-label="Ver captura 6: Continuidade"><span aria-hidden="true">06</span>Continuidade</button>
+          <button class="guide-selector" type="button" data-guide-slide="6" aria-pressed="false" aria-label="Ver captura 7: Detalhes"><span aria-hidden="true">07</span>Detalhes</button>
+          <button class="guide-selector" type="button" data-guide-slide="7" aria-pressed="false" aria-label="Ver captura 8: Alertas"><span aria-hidden="true">08</span>Alertas</button>
+          <button class="guide-selector" type="button" data-guide-slide="8" aria-pressed="false" aria-label="Ver captura 9: Configurações"><span aria-hidden="true">09</span>Configurações</button>
+        </div>
+        <p id="guideAnnouncement" class="guide-sr-only" aria-live="polite" aria-atomic="true"></p>
+      </div>
+      <p class="guide-hint">Escolha uma função para explorar no seu ritmo. Clique na imagem para ampliar.</p>
+      <noscript><p>Abra as capturas: <a href="./assets/guia/01-atividade.webp">Atividade</a> · <a href="./assets/guia/02-rastreios.webp">Rastreios</a> · <a href="./assets/guia/04-busca.webp">Busca</a> · <a href="./assets/guia/06-leitor.webp">Leitor</a> · <a href="./assets/guia/07-anexos.webp">Imagens</a> · <a href="./assets/guia/05-continuar.webp">Continuidade</a> · <a href="./assets/guia/03-detalhes.webp">Detalhes</a> · <a href="./assets/guia/08-alertas.webp">Alertas</a> · <a href="./assets/guia/09-configuracoes.webp">Configurações</a>.</p></noscript>
+      <dialog id="guideImageDialog" class="guide-image-dialog" aria-labelledby="guideFullTitle">
+        <div class="guide-image-head">
+          <div><h3 id="guideFullTitle">Captura do painel</h3><a id="guideOriginal" href="./assets/guia/01-atividade.webp" target="_blank" rel="noopener">Abrir imagem original</a></div>
+          <button id="guideCloseImage" class="guide-control" type="button" aria-label="Fechar captura ampliada">Fechar</button>
+        </div>
+        <img id="guideFullImage" alt="" width="2880" height="1800">
+      </dialog>
+      <div class="guide-video-head">
+        <h3>Veja também o passo a passo em vídeo</h3>
+        <p>Um passeio sem áudio pelo fluxo principal, com capturas reais do painel e explicações na tela.</p>
       </div>
       <div class="video-frame">
         <video class="tutorial-video" controls preload="none" playsinline
-          poster="./assets/trakino-como-funciona-poster.png"
+          poster="./assets/guia/trackertalk-painel-0.11.2-poster.png"
           aria-describedby="videoEtapas">
-          <source src="./assets/trakino-como-funciona.webm" type="video/webm">
+          <source src="./assets/guia/trackertalk-painel-0.11.2.webm" type="video/webm">
           Seu navegador não conseguiu reproduzir o guia visual.
         </video>
       </div>

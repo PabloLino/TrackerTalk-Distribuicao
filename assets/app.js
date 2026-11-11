@@ -186,6 +186,141 @@ function configureNavigation() {
   });
 }
 
+function configureVisualGuide() {
+  const guide = $('#visualGuide');
+  if (!guide) return;
+  const slides = [...guide.querySelectorAll('.guide-slide')];
+  const selectors = [...guide.querySelectorAll('[data-guide-slide]')];
+  const toggle = $('#guidePlayback');
+  const counter = $('#guideCounter');
+  const announcement = $('#guideAnnouncement');
+  const dialog = $('#guideImageDialog');
+  const dialogImage = $('#guideFullImage');
+  const dialogTitle = $('#guideFullTitle');
+  const original = $('#guideOriginal');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let index = 0;
+  let playing = !motion.matches;
+  let visible = false;
+  let hovered = false;
+  let timer;
+  let entrance;
+  let playbackIntent;
+  let touch;
+  let swiped = false;
+
+  function schedule() {
+    window.clearTimeout(timer);
+    toggle.textContent = playing ? 'Pausar' : 'Reproduzir';
+    toggle.setAttribute('aria-label', playing ? 'Pausar avanço automático das capturas' : 'Reproduzir capturas automaticamente');
+    toggle.setAttribute('aria-pressed', String(playing));
+    if (playing && visible && !hovered && !document.hidden && !dialog.open) {
+      timer = window.setTimeout(() => show(index + 1, false), 7500);
+    }
+  }
+
+  function show(next, manual = true) {
+    if (manual) playing = false;
+    entrance?.cancel();
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide, position) => { slide.hidden = position !== index; });
+    selectors.forEach((button, position) => button.setAttribute('aria-pressed', String(position === index)));
+    const slide = slides[index];
+    slide.querySelector('img').loading = 'eager';
+    if (visible && !motion.matches && slide.animate) {
+      entrance = slide.animate([
+        { opacity: .35, transform: 'translateX(12px)' },
+        { opacity: 1, transform: 'translateX(0)' }
+      ], { duration: 380, easing: 'ease-out' });
+    }
+    counter.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+    if (manual) announcement.textContent = 'Captura ' + (index + 1) + ' de ' + slides.length + ': ' + slide.querySelector('h3').textContent;
+    if (visible) slides[(index + 1) % slides.length].querySelector('img').loading = 'eager';
+    schedule();
+  }
+
+  $('#guidePrevious').addEventListener('click', () => show(index - 1));
+  $('#guideNext').addEventListener('click', () => show(index + 1));
+  selectors.forEach(button => button.addEventListener('click', () => show(Number(button.dataset.guideSlide))));
+  toggle.addEventListener('pointerdown', () => { playbackIntent = !playing; });
+  toggle.addEventListener('click', event => {
+    playing = event.detail > 0 && playbackIntent !== undefined ? playbackIntent : !playing;
+    playbackIntent = undefined;
+    schedule();
+  });
+  guide.addEventListener('mouseenter', () => { hovered = true; schedule(); });
+  guide.addEventListener('mouseleave', () => { hovered = false; schedule(); });
+  guide.addEventListener('focusin', () => {
+    playing = false;
+    schedule();
+  });
+  guide.addEventListener('keydown', event => {
+    const actions = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: slides.length - 1 };
+    if (!(event.key in actions)) return;
+    event.preventDefault();
+    show(actions[event.key]);
+  });
+  guide.addEventListener('pointerdown', event => {
+    swiped = false;
+    if (event.pointerType !== 'touch' || !event.target.closest('.guide-display')) return;
+    touch = { x: event.clientX, y: event.clientY };
+  });
+  guide.addEventListener('pointerup', event => {
+    if (!touch) return;
+    const dx = event.clientX - touch.x;
+    const dy = event.clientY - touch.y;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      swiped = true;
+      show(index + (dx < 0 ? 1 : -1));
+    }
+    touch = null;
+  });
+  guide.addEventListener('pointercancel', () => { touch = null; });
+  guide.addEventListener('click', event => {
+    if (swiped) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      swiped = false;
+    }
+  }, true);
+  guide.querySelectorAll('.guide-shot').forEach(link => link.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0 || !dialog.showModal) return;
+    event.preventDefault();
+    playing = false;
+    const slide = link.closest('.guide-slide');
+    dialogTitle.textContent = slide.querySelector('h3').textContent;
+    dialogImage.src = link.href;
+    dialogImage.alt = link.querySelector('img').alt;
+    original.href = link.href;
+    dialog.showModal();
+    schedule();
+  }));
+  $('#guideCloseImage').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const box = dialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', schedule);
+  document.addEventListener('visibilitychange', schedule);
+  motion.addEventListener('change', () => {
+    entrance?.cancel();
+    if (motion.matches) playing = false;
+    schedule();
+  });
+  $('.tutorial-video')?.addEventListener('play', () => { playing = false; schedule(); });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      if (visible) slides[(index + 1) % slides.length].querySelector('img').loading = 'eager';
+      schedule();
+    }, { threshold: .2 }).observe(guide);
+  } else {
+    visible = true;
+  }
+  show(0, false);
+}
+
 function blockFraming() {
   if (window.top === window.self) return;
   try {
@@ -205,4 +340,5 @@ applyTheme(storedTheme());
 $('#themeToggle')?.addEventListener('click', toggleTheme);
 $('#copyHash')?.addEventListener('click', copyHash);
 configureNavigation();
+configureVisualGuide();
 loadReleaseData();

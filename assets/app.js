@@ -202,7 +202,6 @@ function configureVisualGuide() {
   let index = 0;
   let playing = !motion.matches;
   let visible = false;
-  let hovered = false;
   let timer;
   let entrance;
   let playbackIntent;
@@ -214,7 +213,7 @@ function configureVisualGuide() {
     toggle.textContent = playing ? 'Pausar' : 'Reproduzir';
     toggle.setAttribute('aria-label', playing ? 'Pausar avanço automático das capturas' : 'Reproduzir capturas automaticamente');
     toggle.setAttribute('aria-pressed', String(playing));
-    if (playing && visible && !hovered && !document.hidden && !dialog.open) {
+    if (playing && visible && !document.hidden && !dialog.open) {
       timer = window.setTimeout(() => show(index + 1, false), 7500);
     }
   }
@@ -248,8 +247,6 @@ function configureVisualGuide() {
     playbackIntent = undefined;
     schedule();
   });
-  guide.addEventListener('mouseenter', () => { hovered = true; schedule(); });
-  guide.addEventListener('mouseleave', () => { hovered = false; schedule(); });
   guide.addEventListener('focusin', () => {
     playing = false;
     schedule();

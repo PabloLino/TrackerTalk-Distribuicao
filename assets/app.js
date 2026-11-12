@@ -191,8 +191,6 @@ function configureVisualGuide() {
   if (!guide) return;
   const slides = [...guide.querySelectorAll('.guide-slide')];
   const selectors = [...guide.querySelectorAll('[data-guide-slide]')];
-  const toggle = $('#guidePlayback');
-  const counter = $('#guideCounter');
   const announcement = $('#guideAnnouncement');
   const dialog = $('#guideImageDialog');
   const dialogImage = $('#guideFullImage');
@@ -200,26 +198,12 @@ function configureVisualGuide() {
   const original = $('#guideOriginal');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let index = 0;
-  let playing = !motion.matches;
   let visible = false;
-  let timer;
   let entrance;
-  let playbackIntent;
   let touch;
   let swiped = false;
 
-  function schedule() {
-    window.clearTimeout(timer);
-    toggle.textContent = playing ? 'Pausar' : 'Reproduzir';
-    toggle.setAttribute('aria-label', playing ? 'Pausar avanço automático das capturas' : 'Reproduzir capturas automaticamente');
-    toggle.setAttribute('aria-pressed', String(playing));
-    if (playing && visible && !document.hidden && !dialog.open) {
-      timer = window.setTimeout(() => show(index + 1, false), 7500);
-    }
-  }
-
   function show(next, manual = true) {
-    if (manual) playing = false;
     entrance?.cancel();
     index = (next + slides.length) % slides.length;
     slides.forEach((slide, position) => { slide.hidden = position !== index; });
@@ -232,25 +216,11 @@ function configureVisualGuide() {
         { opacity: 1, transform: 'translateX(0)' }
       ], { duration: 380, easing: 'ease-out' });
     }
-    counter.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
     if (manual) announcement.textContent = 'Captura ' + (index + 1) + ' de ' + slides.length + ': ' + slide.querySelector('h3').textContent;
     if (visible) slides[(index + 1) % slides.length].querySelector('img').loading = 'eager';
-    schedule();
   }
 
-  $('#guidePrevious').addEventListener('click', () => show(index - 1));
-  $('#guideNext').addEventListener('click', () => show(index + 1));
   selectors.forEach(button => button.addEventListener('click', () => show(Number(button.dataset.guideSlide))));
-  toggle.addEventListener('pointerdown', () => { playbackIntent = !playing; });
-  toggle.addEventListener('click', event => {
-    playing = event.detail > 0 && playbackIntent !== undefined ? playbackIntent : !playing;
-    playbackIntent = undefined;
-    schedule();
-  });
-  guide.addEventListener('focusin', () => {
-    playing = false;
-    schedule();
-  });
   guide.addEventListener('keydown', event => {
     const actions = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: slides.length - 1 };
     if (!(event.key in actions)) return;
@@ -283,14 +253,12 @@ function configureVisualGuide() {
   guide.querySelectorAll('.guide-shot').forEach(link => link.addEventListener('click', event => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0 || !dialog.showModal) return;
     event.preventDefault();
-    playing = false;
     const slide = link.closest('.guide-slide');
     dialogTitle.textContent = slide.querySelector('h3').textContent;
     dialogImage.src = link.href;
     dialogImage.alt = link.querySelector('img').alt;
     original.href = link.href;
     dialog.showModal();
-    schedule();
   }));
   $('#guideCloseImage').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => {
@@ -298,19 +266,11 @@ function configureVisualGuide() {
     const box = dialog.getBoundingClientRect();
     if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
   });
-  dialog.addEventListener('close', schedule);
-  document.addEventListener('visibilitychange', schedule);
-  motion.addEventListener('change', () => {
-    entrance?.cancel();
-    if (motion.matches) playing = false;
-    schedule();
-  });
-  $('.tutorial-video')?.addEventListener('play', () => { playing = false; schedule(); });
+  motion.addEventListener('change', () => entrance?.cancel());
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => {
       visible = entries[0].isIntersecting;
       if (visible) slides[(index + 1) % slides.length].querySelector('img').loading = 'eager';
-      schedule();
     }, { threshold: .2 }).observe(guide);
   } else {
     visible = true;
